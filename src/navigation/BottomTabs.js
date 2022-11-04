@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Home from '../screens/Home';
 import Favourite from '../screens/Favourite';
 import MyBooking from '../screens/Mybooking';
@@ -20,11 +21,6 @@ const BottomTabs = () => {
         component={Home}
         options={() => {
           return {
-            tabBarLabel: ({focused}) => {
-              return (
-                <Text style={{color: focused ? 'red' : 'black'}}>{'Home'}</Text>
-              );
-            },
             tabBarIcon: ({focused}) => (
               <Image
                 source={{
@@ -43,20 +39,8 @@ const BottomTabs = () => {
         component={Favourite}
         options={() => {
           return {
-            tabBarLabel: ({focused}) => {
-              return (
-                <Text style={{color: focused ? 'red' : 'black'}}>
-                  {'Favourite'}
-                </Text>
-              );
-            },
             tabBarIcon: () => (
-              <Image
-                source={{
-                  uri: iconUrl,
-                }}
-                style={styles.icon}
-              />
+              <Icon name="rocket" size={30} color="#900" />
             ),
             headerShown: false,
           };
@@ -68,13 +52,6 @@ const BottomTabs = () => {
         component={MyBooking}
         options={() => {
           return {
-            tabBarLabel: ({focused}) => {
-              return (
-                <Text style={{color: focused ? 'red' : 'black'}}>
-                  {'Booking'}
-                </Text>
-              );
-            },
             tabBarIcon: () => (
               <Image
                 source={{
@@ -93,11 +70,6 @@ const BottomTabs = () => {
         component={Chat}
         options={() => {
           return {
-            tabBarLabel: ({focused}) => {
-              return (
-                <Text style={{color: focused ? 'red' : 'black'}}>{'Chat'}</Text>
-              );
-            },
             tabBarIcon: () => (
               <Image
                 source={{
@@ -116,13 +88,6 @@ const BottomTabs = () => {
         component={Setting}
         options={() => {
           return {
-            tabBarLabel: ({focused}) => {
-              return (
-                <Text style={{color: focused ? 'red' : 'black'}}>
-                  {'Setting'}
-                </Text>
-              );
-            },
             tabBarIcon: () => (
               <Image
                 source={{
