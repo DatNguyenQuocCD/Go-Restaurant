@@ -17,17 +17,12 @@ const BottomTabs = () => {
   return (
     <BottomTab.Navigator sceneContainerStyle={{backgroundColor: 'white'}}>
       <BottomTab.Screen
-        name="HomeTab"
+        name="Restaurant"
         component={Home}
         options={() => {
           return {
             tabBarIcon: ({focused}) => (
-              <Image
-                source={{
-                  uri: iconUrl,
-                }}
-                style={styles.icon}
-              />
+              <Icon name="home" size={30} color="black" />
             ),
             headerShown: false,
           };
@@ -35,12 +30,12 @@ const BottomTabs = () => {
       />
 
       <BottomTab.Screen
-        name="FavouriteTab"
+        name="Like"
         component={Favourite}
         options={() => {
           return {
             tabBarIcon: () => (
-              <Icon name="rocket" size={30} color="#900" />
+              <Icon name="heart" size={30} color="black" />
             ),
             headerShown: false,
           };
@@ -48,15 +43,13 @@ const BottomTabs = () => {
       />
 
       <BottomTab.Screen
-        name="MyBookingTab"
+        name="Map View"
         component={MyBooking}
         options={() => {
           return {
             tabBarIcon: () => (
               <Image
-                source={{
-                  uri: iconUrl,
-                }}
+                source={require("../asset/img/location.png")}
                 style={styles.icon}
               />
             ),
@@ -66,17 +59,12 @@ const BottomTabs = () => {
       />
 
       <BottomTab.Screen
-        name="ChatTab"
+        name="Chatting"
         component={Chat}
         options={() => {
           return {
             tabBarIcon: () => (
-              <Image
-                source={{
-                  uri: iconUrl,
-                }}
-                style={styles.icon}
-              />
+              <Icon name="wechat" size={30} color="black" />
             ),
             headerShown: false,
           };
@@ -84,17 +72,12 @@ const BottomTabs = () => {
       />
 
       <BottomTab.Screen
-        name="SettingTab"
+        name="User"
         component={Setting}
         options={() => {
           return {
             tabBarIcon: () => (
-              <Image
-                source={{
-                  uri: iconUrl,
-                }}
-                style={styles.icon}
-              />
+              <Icon name="user" size={30} color="black" />
             ),
             headerShown: false,
           };
